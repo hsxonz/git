@@ -1,0 +1,6 @@
+[
+    {'id': 2, 'answer': 'Đây là đáp án mẫu', 'created_at': '2025-08-13 11: 53: 46'
+    },
+    {'id': 1, 'answer': "const axios = require('axios');\n\n// URL server NodeJS\nconst API_URL = 'http://localhost:3022/chuyen_mon/dap_an';\n\n// Dữ liệu đáp án muốn gửi\nconst answerData = {\n  answer: 'Đây là đáp án mẫu'\n};\n\nasync function pushAnswer() {\n  try {\n    const res = await axios.post(API_URL, answerData, {\n      headers: { 'Content-Type': 'application/json' }\n    });\n    console.log('Phản hồi từ server:', res.data);\n  } catch (err) {\n    console.error('Lỗi khi gửi đáp án:', err.message);\n  }\n}", 'created_at': '2025-08-13 11: 39: 11'
+    }
+]
