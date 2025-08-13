@@ -1,0 +1,44 @@
+// push_dapan.js
+const axios = require('axios');
+
+// URL server NodeJS
+const API_URL = 'http://localhost:3022/chuyen_mon/dap_an';
+
+// Dữ liệu đáp án muốn gửi
+const answerData = {
+    answer: `
+  const axios = require('axios');
+
+// URL server NodeJS
+const API_URL = 'http://localhost:3022/chuyen_mon/dap_an';
+
+// Dữ liệu đáp án muốn gửi
+const answerData = {
+  answer: 'Đây là đáp án mẫu'
+};
+
+async function pushAnswer() {
+  try {
+    const res = await axios.post(API_URL, answerData, {
+      headers: { 'Content-Type': 'application/json' }
+    });
+    console.log('Phản hồi từ server:', res.data);
+  } catch (err) {
+    console.error('Lỗi khi gửi đáp án:', err.message);
+  }
+}
+  `
+};
+
+async function pushAnswer() {
+    try {
+        const res = await axios.post(API_URL, answerData, {
+            headers: { 'Content-Type': 'application/json' }
+        });
+        console.log('Phản hồi từ server:', res.data);
+    } catch (err) {
+        console.error('Lỗi khi gửi đáp án:', err.message);
+    }
+}
+
+pushAnswer();
